@@ -1,0 +1,16 @@
+<!--
+ - Created by mzulubiev on 22.07.2022.
+ -->
+
+<!-- Wholesalers Accounts -->
+<template>
+    <lightning-card title="Wholesalers">
+        <lightning-layout multiple-rows="true" vertical-align="end">
+                <lightning-layout-item size="12" padding="around-small">
+                    <!--List Of Account Using data Table-->
+                    <lightning-datatable key-field="id" data={data} columns ={columns} >
+                    </lightning-datatable>
+                </lightning-layout-item>
+        </lightning-layout>
+    </lightning-card>
+</template>

@@ -1,0 +1,35 @@
+<!--
+ - Created by mzulubiev on 22.07.2022.
+ -->
+
+<!-- Book Search -->
+<template>
+    <lightning-card title="Custom Order Search with Account Name">
+    <lightning-layout multiple-rows="true" vertical-align="end">
+        <lightning-layout-item size="4" padding="around-small">
+            <!--Input text to Search Account-->
+            <lightning-input type="text" label="Enter Account Name To Search Orders"
+                             value={searchKey}
+                             onchange={handelSearchKey}>
+            </lightning-input>
+        </lightning-layout-item >
+
+        <lightning-layout-item size="2" padding="around-small">
+            <!--Search Button-->
+            <lightning-button label="Search" variant="brand" onclick={SearchOrders}>
+
+            </lightning-button>
+        </lightning-layout-item>
+        <lightning-layout-item size="12" padding="around-small">
+            <!--List Of Orders Using data Table-->
+            <lightning-datatable key-field="id" data={orders} columns ={cols}
+                                 sorted-by={sortBy}
+                                 sorted-direction={sortDirection}
+                                 onsort={doSorting}
+                                 hide-checkbox-column="true">
+
+            </lightning-datatable>
+        </lightning-layout-item>
+    </lightning-layout>
+    </lightning-card>
+</template>
